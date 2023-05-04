@@ -1,0 +1,25 @@
+<main class="home-page min-h-full bg-gray-200">
+  <header class="flex navigation-menu">
+    <menu></menu>
+    <menu-sidenav-tickets></menu-sidenav-tickets>
+  </header>
+
+  <section class="main-content p-4">
+    <div class="w-100 pb-4">
+      <nav class="bg-white rounded px-4">
+        <div class="flex h-16 items-center justify-between">
+          <h2>Todos os tickets</h2>
+          <div class="flex items-baseline space-x-4">
+            <button (click)="slideOverStatus(true)"
+              class="bg-cyan-100 text-cyan-600 border border-cyan-500 rounded-md px-3 py-2 text-sm font-medium"
+              aria-current="page">+ Novo Ticket</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="block bg-white rounded h-full w-full p-4">
+      <grid-tickets></grid-tickets>
+    </div>
+    <slide-over [openSlideOver]="isVisibleSlideOverStatus" ($slideOverStatus)="slideOverStatus($event)"></slide-over>
+  </section>
+</main>

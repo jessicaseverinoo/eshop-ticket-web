@@ -1,0 +1,13 @@
+<div id="data-grid-tickets">
+  <dx-data-grid id="gridContainer" [dataSource]="dataSource" keyExpr="codigoReclamacao" [showBorders]="true"
+    [rowAlternationEnabled]="true" [showRowLines]="true">
+
+    <dxi-column dataField="codigoPedido" caption="Pedido"></dxi-column>
+    <dxi-column dataField="codigoCliente" caption="Cliente"></dxi-column>
+    <dxi-column dataField="codigoReclamacao" caption="Ticket"></dxi-column>
+    <dxi-column dataField="status" caption="Status" [width]="130"></dxi-column>
+    <dxi-column dataField="assunto" caption="Assunto"></dxi-column>
+    <dxi-column dataField="descricao" caption="Descrição"></dxi-column>
+    <dxi-column dataField="imagens" caption="Imagens"></dxi-column>
+  </dx-data-grid>
+</div>
