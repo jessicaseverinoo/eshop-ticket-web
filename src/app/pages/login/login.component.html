@@ -3,15 +3,15 @@
     <img class="img-login" src="..\..\assets\images\login-img.png" />
   </div>
   <div class="form">
-    <form class="form-login">
+    <form class="form-login" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <label>E-mail:</label>
-      <input type="text" />
+      <input type="text" formControlName="email" />
       <label>Senha:</label>
-      <input type="Password" />
+      <input type="Password" formControlName="password" />
       <div>
         <a href="#">Esqueci minha senha</a>
       </div>
-      <button (click)="login()">Entrar</button>
+      <button>Entrar</button>
     </form>
   </div>
 </div>

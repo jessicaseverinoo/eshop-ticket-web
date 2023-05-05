@@ -169,6 +169,7 @@
                                   name="file-upload"
                                   (change)="uploadFile($event)"
                                   type="file"
+                                  multiple
                                   class="sr-only"
                                 />
                               </label>
@@ -194,6 +195,8 @@
                   </button>
                   <button
                     type="submit"
+                    [disabled]="!ticketForm.valid"
+                    [ngClass]="!ticketForm.valid ? 'opacity-30' : 'opacity-100'"
                     class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Cadastrar Ticket
@@ -206,4 +209,8 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center" *ngIf="sendingForm">
+  <div class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-64 w-64"></div>
 </div>
